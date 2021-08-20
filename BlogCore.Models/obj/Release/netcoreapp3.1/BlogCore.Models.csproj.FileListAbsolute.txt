@@ -1,0 +1,10 @@
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\bin\Release\netcoreapp3.1\BlogCore.Models.deps.json
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\bin\Release\netcoreapp3.1\BlogCore.Models.dll
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\bin\Release\netcoreapp3.1\BlogCore.Models.pdb
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\obj\Release\netcoreapp3.1\BlogCore.Models.csproj.AssemblyReference.cache
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\obj\Release\netcoreapp3.1\BlogCore.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\obj\Release\netcoreapp3.1\BlogCore.Models.AssemblyInfoInputs.cache
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\obj\Release\netcoreapp3.1\BlogCore.Models.AssemblyInfo.cs
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\obj\Release\netcoreapp3.1\BlogCore.Models.csproj.CoreCompileInputs.cache
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\obj\Release\netcoreapp3.1\BlogCore.Models.dll
+D:\lenguajes\C#\Render2Web\BlogCore\BlogCore.Models\obj\Release\netcoreapp3.1\BlogCore.Models.pdb

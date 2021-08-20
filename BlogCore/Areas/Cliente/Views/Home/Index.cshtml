@@ -1,0 +1,80 @@
+﻿@model BlogCore.Models.ViewModels.HomeVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--SLIDER-->
+  
+    <header>
+        @*bootstrap carrousel de la web*@
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">           
+            <div class="carousel-inner">
+                @{ int cont = 0; }
+
+
+                @foreach (var item in Model.Slider)
+                {
+                    //cuando el cont sea 0, cont++, activa el item 
+                    var itemDinamico = cont++ == 0 ? "item active" : "item";
+
+                    //paso el item dinamico asi se va mostrando
+                    <div class="carousel-item @itemDinamico">     
+                        
+                        <img src="@Url.Content(item.UrlImagen)" />
+                        @*raw por si tiene caracteres especiales, los omite y deja solo el texto*@
+                        <h1 class="text-dark text-center">@Html.Raw(@item.Nombre)</h1>                         
+                    </div>
+                }
+
+                @*bootstrap. carrousel. flechas para pasar los slidera*@
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+
+<!--separador-->
+<div class="row fondoTitulo mt-5">
+    <div class="col-sm-12 py-5">
+        <h1 class="text-center text-white">Últimos Cursos y Tutoriales</h1>
+    </div>
+</div>
+
+
+<!--ARTICULOS-->
+
+@*valido si hay articulos*@
+@if (Model.ListaArticulos.Count() > 0)
+{
+    <hr />
+    <div class="row">
+        @*paso el ordenamiento por id*@
+        @foreach (var articulo in Model.ListaArticulos.OrderBy(o => o.Id))
+        {
+            <div class="col-4">
+                <div class="card">
+                    @*accedo a los parametros de articulo en modelo.listaarticulos*@
+                    <img src="@articulo.UrlImagen" class="img-thumbnail" width="100%"/>
+                    <div class="card-body">
+                        <h5 class="text-center">@articulo.Nombre</h5>
+                        <p>@articulo.FechaCreacion</p>
+
+                        @*hipervinculo"mas informacion" que llama a la vista detalles, pasa el id*@ 
+                        <a asp-action="Details" class="btn btn-success" style="border-radius:2px" asp-route-id="@articulo.Id">Más información</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No existen articulos</p>
+}
